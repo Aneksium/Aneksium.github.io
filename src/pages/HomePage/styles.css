@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+#cont {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.comingSoon {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+    color: aqua;
+    text-shadow: 15px 15px 5px black;
+    cursor: default;
+}
+
+.comingSoon:hover {
+    color: rgb(159, 96, 255);
+    transition: color 250ms;
+    animation: identifier 0.2s ease-out forwards;
+}
+
+@keyframes identifier {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
