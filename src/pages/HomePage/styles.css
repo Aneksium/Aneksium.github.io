@@ -33,3 +33,32 @@
         transform: translateY(-10px);
     }
 }
+
+#discord {
+    display: flex;
+    position: absolute;
+    top: calc(100vh - 7.5rem);
+    left: calc(100vw - 9rem);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    border: none;
+    background-color: rgb(159, 96, 255);
+    box-shadow: 10px 10px 5px black;
+    align-items: center;
+    justify-content: center;
+}
+
+#discord:hover {
+    transition: background 200ms;
+    background-color: rgb(91, 54, 147);
+}
+
+#discord img {
+    width: 60%;
+}
+
+#discord:hover > img {
+    transition: opacity 200ms;
+    opacity: 0.5;
+}
