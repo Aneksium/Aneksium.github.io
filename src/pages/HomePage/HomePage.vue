@@ -1,5 +1,5 @@
 <template>
-    <div id="cont">
+    <div class="container">
         <div v-for="char, i in 'Coming&nbsp;Soon!'" :key="i" class="comingSoon">{{ char }}</div>
     </div>
     <router-link to="/discord" id="discord">
