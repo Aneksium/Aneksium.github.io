@@ -8,7 +8,7 @@
                 </div>
                 <div class="form-title">
                     <h2>Create a new account.</h2>
-                    <span>Already got an account? <a href="">Log in.</a></span>
+                    <span>Already got an account? <router-link to="/login">Log in.</router-link></span>
                 </div>
                 <form @submit.prevent="handleRegister()">
                     <div class="double-input">
@@ -33,12 +33,12 @@
                         <img src="../../assets/key.png">
                         <input type="password" placeholder="Confirm Password" v-model="password_2">
                     </div>
-                    <input type="submit" value="SIGN UP" disabled>
+                    <input type="submit" value="SIGN UP">
                 </form>
             </div>
         </div>
         <div class="right">
-            aausydgausygd
+
         </div>
     </div>
 </template>

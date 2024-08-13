@@ -1,6 +1,11 @@
 <template>
     <div class="container">
-        <div v-for="char, i in 'Coming&nbsp;Soon!'" :key="i" class="comingSoon">{{ char }}</div>
+        <div class="left">
+            <div class="home-logo">
+                <img class="home-logo" src="../../assets/logo.png" alt="">
+            </div>
+            <h1>Coming soon</h1>
+        </div>
     </div>
     <router-link to="/discord" id="discord">
         <img src="../../assets/discord.png">

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage/HomePage.vue'
 import DiscordRedirect from '@/pages/DiscordRedirect.vue'
 import SignUp from '@/pages/SignUp/SignUp.vue'
+import LogIn from '@/pages/LogIn/LogIn.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/register',
     name: 'signup',
     component: SignUp
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LogIn
   }
 ]
 
