@@ -30,20 +30,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { State } from '@/store';
+import { defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import PUBLIC_PATHS from '@/constants/publicPaths';
 
 export default defineComponent({
-    name: 'LogIn',
-    data() {
-        return {
-            email: '',
-            password: '',
-        }
-    },
-    methods: {
-        handleLogin() {
-            console.log('a')
-        }
-    }
-})
+  name: "SignUp",
+
+  setup() {
+    const store = useStore<State>();
+    const router = useRouter();
+
+    const email = ref("");
+    const password = ref("");
+
+    const handleLogin= async () => {
+
+      const userData = {
+        email: email.value,
+        password: password.value,
+      };
+
+      try {
+        await store.dispatch("login", userData);
+        router.push(PUBLIC_PATHS.HOME);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    return {
+      email,
+      password,
+      handleLogin,
+    };
+  },
+});
 </script>
